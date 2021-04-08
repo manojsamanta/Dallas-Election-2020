@@ -246,9 +246,10 @@ It gets even more puzzling, when we look into the age distribution of those 50,0
 | 1987 | 4 |
 | 1988 | 9 |
 
-As you can see, this "glitch" affects only those voters older than 65 years. Based on this observation, I am leaning more toward foul play than software glitch, although glitch would be serious enough.
+You can see this data in chart form [here](http://openrecords.org/stories/hackerstargetseniors.html). As you can see, this "glitch" affects only those voters older than 65 years, and you can see both from the table and the figure that the jump between below and above 65 year old is really sharp. It is as if someone intentionally programmed to modify the votes based on an age cutoff.Based on this observation, I am leaning more toward foul play than software glitch, although glitch would be serious enough.
 
+This Dallas observation is unlike many other claims of election tampering, because here you have the data of real votes being tampered and not a probabilistic model. We know exactly who those voters are, where they live, their age and so on. Moreover, the number is substantial to swing local and national elections. Finally, this raises the question that what else happened that did not get caught? If there was foul play, did it manipulate fake votes undetected by this analysis? 
 
-All credits go to the other volunteers of the openrecords project for originally finding these patterns, whereas my role is in just confirming them independently. If you like to see more details, please check [their website](http://openrecords.org).
+All credits for originally finding these patterns go to the other volunteers of the openrecords project, whereas my role is in just confirming them independently. Moreover, they interviewed actual voters, whose votes got purged or manipulated and [confirmed that they did not vote twice](http://openrecords.org/stories/purgedpeople.html).  If you like to see those details, please check [their website](http://openrecords.org).
 
 
