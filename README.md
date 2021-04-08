@@ -105,8 +105,8 @@ As you can see, 1178 voters from Oct 18 disappeared from the roster by Oct 27th.
 
 That got me curious, and I decided to run a pairwise comparison between every consecutive dates with available data. Here are the results.
 
-| Date 1 | Date 2 |
-|--------|--------|
+| Date 1 | Date 2 | Missing Voter |
+|--------|--------|---------------|
 | 10_06-roster.csv|10_07-roster.csv|0 |
 | 10_07-roster.csv|10_08-roster.csv|0 |
 | 10_08-roster.csv|10_11-roster.csv|0 |
