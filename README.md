@@ -165,7 +165,9 @@ If you thought missing 5,700 voters were bad, we are just getting started. The g
 
 As you can see, this person returned the ballot on Oct 2nd and all data were entered on the roster on Oct 6th. Then, on Oct 20, the information on "Date Mailed" magically changed from 29-AUG-20 to 23-SEP-20. Finally, on Oct 30, his "Ballot Returned" changed to 30-OCT-20. That is a rather bizzare behavior in an automated system. 
 
-One possibility is that the software has a glitch, and it randomly alters some of the records. The other possibily is that the original vote submitted by the person got replaced with a new record by some malicious actor. Both possibilities are serious given that we are talking about over 50,000 votes, or over 6% of absentee ballots.
+Going through the records, I found over 50,000 such reincarnated voters (6.2%) out of 799958 total records, whose voting records changed from the original. This is a substantial number to change several local and national polls. What is going on?
+
+One explanation is that the software has a glitch, and it randomly alters some of the records. The other possibily is that the original vote submitted by the person got replaced with a new record by some malicious actor. Both possibilities are serious given that we are talking about over 50,000 votes, or over 6% of absentee ballots.
 
 It gets even more puzzling, when we look into the age distribution of those 50,000 voters (see table below). 
 
