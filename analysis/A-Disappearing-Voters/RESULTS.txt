@@ -1,0 +1,639 @@
+> x = read_csv("raw-data/10_06-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_07-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1     0
+> 
+> x = read_csv("raw-data/10_07-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_08-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1     0
+> 
+> x = read_csv("raw-data/10_08-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_11-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1     0
+> 
+> x = read_csv("raw-data/10_11-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_12-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1     0
+> 
+> x = read_csv("raw-data/10_12-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_14-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1     0
+> 
+> x = read_csv("raw-data/10_14-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_15-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1    32
+
+
+> x = read_csv("raw-data/10_15-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_16-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1  2148
+> 
+> x = read_csv("raw-data/10_16-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+
+> y = read_csv("raw-data/10_17-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1    36
+> 
+> x = read_csv("raw-data/10_17-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+
+> y = read_csv("raw-data/10_18-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1    37
+> 
+> x = read_csv("raw-data/10_18-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_19-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1    85
+ 
+> x = read_csv("raw-data/10_19-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_20-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   130
+
+
+
+> x = read_csv("raw-data/10_20-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_21-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   229
+> 
+> x = read_csv("raw-data/10_21-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_22-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   198
+> 
+> x = read_csv("raw-data/10_22-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_23-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   178
+> 
+> x = read_csv("raw-data/10_23-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_24-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   173
+> 
+
+> x = read_csv("raw-data/10_24-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_25-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   160
+
+> x = read_csv("raw-data/10_25-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_26-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   235
+
+> x = read_csv("raw-data/10_26-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_27-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   139
+> 
+> x = read_csv("raw-data/10_27-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_28-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   178
+
+
+> x = read_csv("raw-data/10_28-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> y = read_csv("raw-data/10_29-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1   205
+ 
+> x = read_csv("raw-data/10_29-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+
+> y = read_csv("raw-data/10_30-roster.csv.gz")
+Parsed with column specification:
+cols(
+  Precinct = col_double(),
+  StateIDNumber = col_double(),
+  `Voter Name` = col_character(),
+  `P=InPerson M=Mail` = col_character(),
+  `Date Ballot Request` = col_character(),
+  `Date Ballot Mailed` = col_character(),
+  `Date Ballot Returned` = col_character(),
+  `Residence Address` = col_character()
+)
+> x %>% left_join(y, by="StateIDNumber")  %>% filter(is.na(Precinct.y)) %>% count
+# A tibble: 1 x 1
+      n
+  <int>
+1  1565
