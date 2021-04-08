@@ -249,5 +249,6 @@ It gets even more puzzling, when we look into the age distribution of those 50,0
 As you can see, this "glitch" affects only those voters older than 65 years. Based on this observation, I am leaning more toward foul play than software glitch, although glitch would be serious enough.
 
 
+All credits go to the other volunteers of the openrecords project for originally finding these patterns, whereas my role is in just confirming them independently. If you like to see more details, please check [their website](http://openrecords.org).
 
 
