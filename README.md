@@ -19,9 +19,48 @@ Once this process is completed, the ballot gets anonymyzed and mixed with other 
 
 ## Data Format
 
-Let me now describe the available data. From October 6th to October 30th, the county released early voting records for the residents. This is essentially the "vote register" file described above.
+Let me now describe the available data.
 
-The released files are cumulative. That means if you voted on October 7th, your name and voting details should continue to appear on each day afterward. Therefore, you expect the files to grow in size, and they do as you can see from the table posted below.
+### Voter Registration File
+
+Among the files in this github repo, you will find one ("raw-data/voter-record.csv.gz") with registration information of all voters ("voter registration file"). This file has over 200 columns, but I picked only two in the github project. Here is a small section from "raw-data/voter-record.csv.gz" -
+
+| SOS_VoterID |    birthdate |
+|-------------|--------------|
+|2132728455   |   1981 |
+|1203297816   |   1977 |
+|2157683062   |   1991 |
+
+
+The openrecords project downloaded the original file 10/13/2020 from the Dallas county. Please keep the [relevant Texas law](https://statutes.capitol.texas.gov/Docs/EL/htm/EL.13.htm#13.143) in mind, which states that a person must register at least 30 days prior to the election.
+
+~~~~~~~~~
+Sec. 13.143.  EFFECTIVE DATE OF REGISTRATION;  PERIOD OF EFFECTIVENESS.  (a)  Except as provided by Subsections (b) and (e), if an applicant's registration application is approved, the registration becomes effective on the 30th day after the date the application is submitted to the registrar or on the date the applicant becomes 18 years of age, whichever is later.
+
+(b)  A registration is effective for purposes of early voting if it will be effective on election day.
+
+(c)  A registration is effective until canceled under this code.
+
+(d)  For purposes of determining the effective date of a registration, an application submitted by:
+
+(1)  mail is considered to be submitted to the registrar on the date it is placed with postage prepaid and properly addressed in the United States mail; or
+
+(2)  telephonic facsimile machine is considered to be submitted to the registrar on the date the transmission is received by the registrar, subject to Subsection (d-2).
+
+(d-1)  The date indicated by the post office cancellation mark is considered to be the date the application was placed in the mail unless proven otherwise.
+
+(d-2)  For a registration application submitted by telephonic facsimile machine to be effective, a copy of the registration application must be submitted by mail and be received by the registrar not later than the fourth business day after the transmission by telephonic facsimile machine is received.
+
+(e)  If the 30th day before the date of an election is a Saturday, Sunday, or legal state or national holiday, an application is considered to be timely if it is submitted to the registrar on or before the next regular business day.
+~~~~~~~~~
+
+
+
+### Early Voting Records ("voting records")
+
+The SOS_VoterID in this table is the same as the StateIDNumber in the early voter tables shown before.
+
+Next we will describe the "voting records" data. From October 6th to October 30th, the county released early voting records for the residents.  The released files are cumulative. That means if you voted on October 7th, your name and voting details should continue to appear on each day afterward. Therefore, you expect the files to grow in size, and they do as you can see from the table posted below.
 
 Here are the data files you will find in [my github project](https://github.com/manojsamanta/Dallas-election-2020) and their number of data lines (excluding header). Each line in each file contains the record of a single voter. As you can see, the files have increasing number of lines every day. That is encouraging.
 
@@ -56,17 +95,10 @@ The actual voting roster tables from the county had many more columns, but I upl
 |----|-----|-----|---------|----|-----------|---------|--------------------|
 |1000|2129749227|AKEEN - ALEXIUS NGOONG |M|29-AUG-20|29-AUG-20|02-OCT-20|6003 ABRAMS RD #1060 DA 75231 |
 
+The StateIDNumber in this table is the same as the SOS_VoterID in the voter registration table shown before.
+
 Note that these files are machine-generated. Therefore, there is no room for clerical error. In fact, the entire process of early voting is operated by the machines. When a voter request for a ballot, the system notes down the "Date Ballot Request" information for the voter. Then the system mails a ballot and notes down "Date Ballot Mailed". Finally, if the voter returns the ballot, the system creates a unique record in this table with "Date Ballot Request", "Date Ballot Mailed" and "Date Ballot Returned" for the voter.
 
-Finally, the county provides another electronic file that contains the registration information of all voters ("voter registration file"). This file has over 200 columns, but I picked only two in the github project. Here is a small section from the file "raw-data/voter-record.csv.gz" -
-
-| SOS_VoterID |    birthdate |
-|-------------|--------------|
-|2132728455   |   1981 |
-|1203297816   |   1977 |
-|2157683062   |   1991 |
-
-The SOS_VoterID in this table is the same as the StateIDNumber in the early voter tables shown before.
 
 
 ## Disappeared (Purged) Voters
