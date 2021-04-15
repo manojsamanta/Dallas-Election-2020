@@ -2,6 +2,8 @@
 
 I spent some time volunteering with the [openrecords project](http://openrecords.org) to investigate a number of puzzling observations in the early voting data from the Dallas county, TX. Here I like to share my analysis so that you can reproduce it. If you can find an honest explanation of the observed anomalies, please let me know in the comment section.
 
+![](https://www.verizon.com/about/sites/default/files/2021-04/votingrights-1230x690.jpg)
+
 ## Data Format
 
 Let me first describe the available data. From October 6th to October 30th, the county released early voting records for the residents. These records are cumulative. That means if you voted on October 7th, your name and voting details should continue to appear on each day afterward. Therefore, you expect the files to grow in size, and they do as you can see from the table posted below.
