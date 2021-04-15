@@ -2,11 +2,26 @@
 
 I spent some time volunteering with the [openrecords project](http://openrecords.org) to investigate a number of puzzling observations in the early voting data from the Dallas county, TX. Here I like to share my analysis so that you can reproduce it. If you can find an honest explanation of the observed anomalies, please let me know in the comment section.
 
+## Brief Introduction to Computerized Election Control
+
+Before getting into the electronic technology and databases, let us start with the traditional centuries-old election system that everyone understands.
+
 ![Testing image](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Election_presidentielle_2007_Lausanne_MG_2761.jpg/1024px-Election_presidentielle_2007_Lausanne_MG_2761.jpg)
+
+A voter goes to a polling center during the election. The person in charge of the polling center checks ID and finds the name of the voter in a polling roster (paper document). This is to ensure that (i) the voter is eligible to vote at the location and (ii) he did not vote already. Then he gives the voter a fresh ballot paper and asks him to use a covered booth to fill it up. The voter fills up the ballot with his choices, and then drops it in a centrally placed box.
+
+Electronic technologies replicate this process in the following way. The voter registration roster with the names of all eligible voters is a computer file. This file does not get updated during the polling season.  The names of everyone who voted is a separate computer file that gets incremented with the information of every new voter. We will call it the "vote roster" in the following discussion.
+
+Let us introduce mail-in voting to this picture. This time, if an absentee voter requests mail-in ballot, the automated system makes sure the person is eligible to vote (based on the voter registration roster) and sends him a ballot by mail.  Later, when an envelope with a filled ballot comes from the absentee voter, the automated system again makes sure the voter is legitimate and did not vote already. Then it opens the envelope, takes out the paper ballot and places inside a locked box with other ballots. At the same time, the system creates a new record in the "vote register" to show that the person already voted. 
+
+Once this process is completed, the ballot gets anonymyzed and mixed with other ballots, and it is not possible to connect the ballot with the voter. To ensure security and integrity of the system, the records once created in the vote register file should not be updated in the future. 
+
 
 ## Data Format
 
-Let me first describe the available data. From October 6th to October 30th, the county released early voting records for the residents. These records are cumulative. That means if you voted on October 7th, your name and voting details should continue to appear on each day afterward. Therefore, you expect the files to grow in size, and they do as you can see from the table posted below.
+Let me now describe the available data. From October 6th to October 30th, the county released early voting records for the residents. This is essentially the "vote register" file described above.
+
+The released files are cumulative. That means if you voted on October 7th, your name and voting details should continue to appear on each day afterward. Therefore, you expect the files to grow in size, and they do as you can see from the table posted below.
 
 Here are the data files you will find in [my github project](https://github.com/manojsamanta/Dallas-election-2020) and their number of data lines (excluding header). Each line in each file contains the record of a single voter. As you can see, the files have increasing number of lines every day. That is encouraging.
 
@@ -43,7 +58,7 @@ The actual voting roster tables from the county had many more columns, but I upl
 
 Note that these files are machine-generated. Therefore, there is no room for clerical error. In fact, the entire process of early voting is operated by the machines. When a voter request for a ballot, the system notes down the "Date Ballot Request" information for the voter. Then the system mails a ballot and notes down "Date Ballot Mailed". Finally, if the voter returns the ballot, the system creates a unique record in this table with "Date Ballot Request", "Date Ballot Mailed" and "Date Ballot Returned" for the voter.
 
-Finally, the county provides another file that contains the registration information of all voters. This file has over 200 columns, but I picked only two in the github project. Here is a small section from the file "raw-data/voter-record.csv.gz" -
+Finally, the county provides another electronic file that contains the registration information of all voters ("voter registration file"). This file has over 200 columns, but I picked only two in the github project. Here is a small section from the file "raw-data/voter-record.csv.gz" -
 
 | SOS_VoterID |    birthdate |
 |-------------|--------------|
@@ -52,7 +67,6 @@ Finally, the county provides another file that contains the registration informa
 |2157683062   |   1991 |
 
 The SOS_VoterID in this table is the same as the StateIDNumber in the early voter tables shown before.
-
 
 
 ## Disappeared (Purged) Voters
